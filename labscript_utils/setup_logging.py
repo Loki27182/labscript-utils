@@ -81,5 +81,5 @@ def setup_logging(program_name, log_level=logging.DEBUG, terminal_level=logging.
             # Prevent bug on windows where writing to stdout without a command
             # window causes a crash:
             sys.stdout = sys.stderr = open(os.devnull, 'w')
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(log_level)
     return logger
