@@ -29,7 +29,7 @@ class LessThanFilter(logging.Filter):
         return record.levelno < self.less_than
 
 
-def setup_logging(program_name, log_level=logging.DEBUG, terminal_level=logging.INFO, maxBytes=1024*1024*50, backupCount=1):
+def setup_logging(program_name, log_level=logging.INFO, terminal_level=logging.INFO, maxBytes=1024*1024*50, backupCount=1):
     # MaxBytes and backupCount args ignored, these are now set in labconfig since they
     # are settings to the server rather than individual logging handlers. Args are left
     # in the function signature for backward compatibility.
